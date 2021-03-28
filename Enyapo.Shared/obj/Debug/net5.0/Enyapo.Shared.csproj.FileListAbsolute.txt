@@ -1,0 +1,12 @@
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\bin\Debug\net5.0\Enyapo.Shared.deps.json
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\bin\Debug\net5.0\Enyapo.Shared.dll
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\bin\Debug\net5.0\ref\Enyapo.Shared.dll
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\bin\Debug\net5.0\Enyapo.Shared.pdb
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\obj\Debug\net5.0\Enyapo.Shared.csprojAssemblyReference.cache
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\obj\Debug\net5.0\Enyapo.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\obj\Debug\net5.0\Enyapo.Shared.AssemblyInfoInputs.cache
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\obj\Debug\net5.0\Enyapo.Shared.AssemblyInfo.cs
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\obj\Debug\net5.0\Enyapo.Shared.csproj.CoreCompileInputs.cache
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\obj\Debug\net5.0\Enyapo.Shared.dll
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\obj\Debug\net5.0\ref\Enyapo.Shared.dll
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.Shared\obj\Debug\net5.0\Enyapo.Shared.pdb
