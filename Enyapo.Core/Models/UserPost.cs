@@ -10,9 +10,9 @@ namespace Enyapo.Core.Models
     public class UserPost : EntityBase
     {
         public int Id { get; set; }
-        public string UserId { get; set; }
+        public string UserAppId { get; set; }
         public string Content { get; set; }
-        public int LikesCount { get; set; } = 0;
+        public int LikesCount { get; set; }
         public UserApp UserApp { get; set; }
     }
 }

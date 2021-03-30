@@ -1,4 +1,5 @@
 ﻿using Enyapo.Core.UnitOfWork;
+using Enyapo.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Enyapo.Data.UnitOfWork
     {
         private readonly DbContext _context;
 
-        public UnitOfWork(DbContext context)
+        public UnitOfWork(EnyapoDbContext context)
         {
             _context = context;
         }

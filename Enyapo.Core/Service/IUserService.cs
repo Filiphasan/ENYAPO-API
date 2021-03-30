@@ -12,5 +12,6 @@ namespace Enyapo.Core.Service
     {
         Task<Response<UserAppDto>> CreateUserAsync(CreateUserAppDto createUserAppDto);
         Task<Response<UserAppDto>> GetUserByNameAsync(string userName);
+        Task<Response<UserAppDto>> GetUserByIdAsync(string userId);
     }
 }

@@ -45,7 +45,6 @@ C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin
 C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -67,3 +66,10 @@ C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin
 C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Enyapo.Data.dll
 C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Enyapo.Service.dll
 C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Enyapo.Shared.dll
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Enyapo.Service.pdb
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Enyapo.Core.pdb
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Enyapo.Data.pdb
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Enyapo.Shared.pdb
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Humanizer.dll
+C:\Users\hasae\Desktop\WebApplication\Asp.NetCore\Projects\Enyapo\Enyapo.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

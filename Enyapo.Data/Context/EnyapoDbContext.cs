@@ -1,4 +1,5 @@
 ﻿using Enyapo.Core.Models;
+using Enyapo.Data.Configuration;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,9 @@ namespace Enyapo.Data.Context
         public DbSet<UserPost> UserPosts { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfigurationsFromAssembly(GetType().Assembly);
+            builder.ApplyConfiguration(new UserAppConfiguration());
+            builder.ApplyConfiguration(new UserPostConfiguration());
+            builder.ApplyConfiguration(new UserRefreshTokenConfiguration());
             base.OnModelCreating(builder);
         }
     }

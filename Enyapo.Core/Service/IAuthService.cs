@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Enyapo.Core.Service
 {
-    public interface IAuthenticationService
+    public interface IAuthService
     {
         Task<Response<TokenDto>> CreateTokenAsync(LoginDto loginDto);
         Task<Response<TokenDto>> CreateTokenByRefreshToken(string refreshToken);

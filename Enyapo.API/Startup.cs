@@ -1,8 +1,19 @@
+using Enyapo.Core.Models;
+using Enyapo.Core.Repository;
+using Enyapo.Core.Service;
+using Enyapo.Core.UnitOfWork;
 using Enyapo.Data.Context;
+using Enyapo.Data.Repository;
+using Enyapo.Data.UnitOfWork;
+using Enyapo.Service.Extensions;
+using Enyapo.Service.Services;
 using Enyapo.Shared.Configurations;
+using Enyapo.Shared.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -29,12 +40,44 @@ namespace Enyapo.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped(typeof(IGenericService<,>), typeof(GenericService<,>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddDbContext<EnyapoDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("SqlServer"), sqlOpt =>
+                options.UseSqlServer(Configuration.GetConnectionString("SqlServer"), sqlOptions =>
                 {
-                    sqlOpt.MigrationsAssembly("Enyapo.Data");
+                    sqlOptions.MigrationsAssembly("Enyapo.Data");
                 });
+            });
+            services.AddIdentity<UserApp, IdentityRole>(options =>
+            {
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequiredUniqueChars = 0;
+            }).AddEntityFrameworkStores<EnyapoDbContext>().AddDefaultTokenProviders();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opt =>
+            {
+                var tokenOptions = Configuration.GetSection("TokenOption").Get<CustomTokenOptions>();
+                opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    ValidIssuer = tokenOptions.Issuer,
+                    ValidAudience = tokenOptions.Audience[0],
+                    IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions.SecurityKey),
+                    ValidateIssuerSigningKey = true,
+                    ValidateAudience = true,
+                    ValidateIssuer = true,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero
+                };
             });
             services.Configure<CustomTokenOptions>(Configuration.GetSection("TokenOption"));
             services.AddControllers();

@@ -14,7 +14,7 @@ namespace Enyapo.Data.Configuration
         public void Configure(EntityTypeBuilder<UserPost> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.UserId).IsRequired();
+            builder.Property(x => x.UserAppId).IsRequired();
             builder.Property(x => x.Content).IsRequired().HasMaxLength(1024);
         }
     }

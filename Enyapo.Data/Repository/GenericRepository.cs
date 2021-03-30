@@ -1,4 +1,5 @@
 ﻿using Enyapo.Core.Repository;
+using Enyapo.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace Enyapo.Data.Repository
     {
         private readonly DbContext _context;
         private readonly DbSet<TEntity> _dbSet;
-        public GenericRepository(DbContext context)
+        public GenericRepository(EnyapoDbContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
