@@ -30,7 +30,7 @@ namespace Enyapo.Service.Services
                 FirstName = createUserAppDto.FirstName,
                 LastName = createUserAppDto.LastName
             };
-            var result = await _userManager.CreateAsync(user);
+            var result = await _userManager.CreateAsync(user,createUserAppDto.Password);
             if (!result.Succeeded)
             {
                 var errors = result.Errors.Select(x => x.Description).ToList();

@@ -16,6 +16,7 @@ namespace Enyapo.Service.Mapper
             CreateMap<UserAppDto, UserApp>().ReverseMap();
             CreateMap<CreateUserAppDto, UserApp>().ReverseMap();
             CreateMap<CreateUserPostDto, UserPost>().ReverseMap();
+            CreateMap<UpdateUserPostDto, UserPost>().ReverseMap();
             CreateMap<UserPostDto, UserPost>().ReverseMap();
         }
     }

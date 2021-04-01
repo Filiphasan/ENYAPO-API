@@ -16,5 +16,8 @@ namespace Enyapo.Core.Models
         public string City { get; set; }
         public string PPPath { get; set; }
         public ICollection<UserPost> UserPosts { get; set; }
+        public ICollection<Activity> Activities { get; set; }
+        public ICollection<UserActivity> UserActivities { get; set; }
+
     }
 }

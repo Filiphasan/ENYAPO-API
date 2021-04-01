@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Enyapo.Core.Dtos
 {
-    public class CreateUserPostDto
+    public class UpdateUserPostDto
     {
+        public int Id { get; set; }
         public string UserAppId { get; set; }
         public string Content { get; set; }
-        public DateTime CreatedTime { get; set; }
+        public int LikesCount { get; set; }
     }
 }
