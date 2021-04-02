@@ -13,6 +13,7 @@ namespace Enyapo.Core.Repository
         Task<TEntity> GetByIdAsync(int id);
         Task<IEnumerable<TEntity>> GetAllAsync();
         IQueryable<TEntity> Where(Expression<Func<TEntity,bool>> predicate);
+        IQueryable<TEntity> JoinWhere(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity,object>> [] includeProperties);
         Task AddAsync(TEntity entity);
         void Remove(TEntity entity);
         TEntity Update(TEntity entity);

@@ -45,6 +45,7 @@ namespace Enyapo.API
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IUserPostService, UserPostService>();
             services.AddScoped<IActivityService, ActivityService>();
+            services.AddScoped<IUserActivityService, UserActivityService>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped(typeof(IGenericService<,>), typeof(GenericService<,>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();

@@ -21,6 +21,8 @@ namespace Enyapo.Service.Mapper
             CreateMap<CreateActivityDto, Activity>().ReverseMap();
             CreateMap<UpdateActivityDto, Activity>().ReverseMap();
             CreateMap<ActivityDto, Activity>().ReverseMap();
+            CreateMap<UserActivityDto, UserActivity>().ReverseMap();
+            CreateMap<CreateUserActivityDto, UserActivity>().ReverseMap();
         }
     }
 }

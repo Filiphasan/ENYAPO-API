@@ -62,6 +62,11 @@ namespace Enyapo.Service.Services
             throw new NotImplementedException();
         }
 
+        public Task<Response<IEnumerable<ActivityDto>>> JoinWhere(Expression<Func<Activity, bool>> predicate, params Expression<Func<Activity, object>>[] includeProperties)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Response<NoDataDto>> Remove(int id)
         {
             var entity = await _activityRepository.GetByIdAsync(id);
@@ -86,7 +91,7 @@ namespace Enyapo.Service.Services
 
         public async Task<Response<IEnumerable<ActivityDto>>> Where(Expression<Func<Activity, bool>> predicate)
         {
-            var list = await _activityRepository.Where(predicate).ToListAsync();
+            var list = await _activityRepository.Where(predicate).Include(x => x.UserActivities).ToListAsync();
             if (!list.Any())
             {
                 return Response<IEnumerable<ActivityDto>>.Fail("No data!", 502, true);

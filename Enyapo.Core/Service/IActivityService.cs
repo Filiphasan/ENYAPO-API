@@ -15,6 +15,7 @@ namespace Enyapo.Core.Service
         Task<Response<ActivityDto>> GetByIdAsync(int id);
         Task<Response<IEnumerable<ActivityDto>>> GetAllAsync();
         Task<Response<IEnumerable<ActivityDto>>> Where(Expression<Func<Activity, bool>> predicate);
+        Task<Response<IEnumerable<ActivityDto>>> JoinWhere(Expression<Func<Activity, bool>> predicate, params Expression<Func<Activity, object>>[] includeProperties);
         Task<Response<ActivityDto>> AddAsync(CreateActivityDto entity);
         Task<Response<NoDataDto>> Remove(int id);
         Task<Response<NoDataDto>> HardRemove(int id);

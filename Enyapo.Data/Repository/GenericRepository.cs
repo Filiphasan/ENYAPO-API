@@ -40,6 +40,20 @@ namespace Enyapo.Data.Repository
             return entity;
         }
 
+        public IQueryable<TEntity> JoinWhere(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            IQueryable<TEntity> query = _dbSet;
+            query = query.Where(predicate);
+            if (includeProperties.Any())
+            {
+                foreach (var item in includeProperties)
+                {
+                    query = query.Include(item);
+                }
+            }
+            return query;
+        }
+
         public void Remove(TEntity entity)
         {
             _dbSet.Remove(entity);

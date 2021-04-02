@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Enyapo.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,6 @@ namespace Enyapo.Core.Dtos
         public string UserAppId { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime ModifiedTime { get; set; }
+        public ICollection<UserActivity> UserActivities { get; set; }
     }
 }
