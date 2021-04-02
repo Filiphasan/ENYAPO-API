@@ -18,11 +18,16 @@ namespace Enyapo.Data.Context
         }
         public DbSet<UserRefreshToken> UserRefreshTokens { get; set; }
         public DbSet<UserPost> UserPosts { get; set; }
+        public DbSet<Activity> Activities { get; set; }
+        public DbSet<UserActivity> UserActivities { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new UserAppConfiguration());
             builder.ApplyConfiguration(new UserPostConfiguration());
             builder.ApplyConfiguration(new UserRefreshTokenConfiguration());
+            builder.ApplyConfiguration(new ActivityConfiguration());
+            builder.ApplyConfiguration(new UserActivityConfiguration());
             base.OnModelCreating(builder);
         }
     }

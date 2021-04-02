@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Service\\Enyapo.Service.csproj": {}
+    "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Service\\Enyapo.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Core\\Enyapo.Core.csproj": {
+    "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Core\\Enyapo.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Core\\Enyapo.Core.csproj",
+        "projectUniqueName": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Core\\Enyapo.Core.csproj",
         "projectName": "Enyapo.Core",
-        "projectPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Core\\Enyapo.Core.csproj",
+        "projectPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Core\\Enyapo.Core.csproj",
         "packagesPath": "C:\\Users\\hasae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Core\\obj\\",
+        "outputPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hasae\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Shared\\Enyapo.Shared.csproj": {
-                "projectPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Shared\\Enyapo.Shared.csproj"
+              "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Shared\\Enyapo.Shared.csproj": {
+                "projectPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Shared\\Enyapo.Shared.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Data\\Enyapo.Data.csproj": {
+    "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\Enyapo.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Data\\Enyapo.Data.csproj",
+        "projectUniqueName": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\Enyapo.Data.csproj",
         "projectName": "Enyapo.Data",
-        "projectPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Data\\Enyapo.Data.csproj",
+        "projectPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\Enyapo.Data.csproj",
         "packagesPath": "C:\\Users\\hasae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Data\\obj\\",
+        "outputPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hasae\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,8 +92,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Core\\Enyapo.Core.csproj": {
-                "projectPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Core\\Enyapo.Core.csproj"
+              "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Core\\Enyapo.Core.csproj": {
+                "projectPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Core\\Enyapo.Core.csproj"
               }
             }
           }
@@ -148,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Service\\Enyapo.Service.csproj": {
+    "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Service\\Enyapo.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Service\\Enyapo.Service.csproj",
+        "projectUniqueName": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Service\\Enyapo.Service.csproj",
         "projectName": "Enyapo.Service",
-        "projectPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Service\\Enyapo.Service.csproj",
+        "projectPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Service\\Enyapo.Service.csproj",
         "packagesPath": "C:\\Users\\hasae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Service\\obj\\",
+        "outputPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hasae\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -172,8 +172,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Data\\Enyapo.Data.csproj": {
-                "projectPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Data\\Enyapo.Data.csproj"
+              "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\Enyapo.Data.csproj": {
+                "projectPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\Enyapo.Data.csproj"
               }
             }
           }
@@ -212,14 +212,14 @@
         }
       }
     },
-    "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Shared\\Enyapo.Shared.csproj": {
+    "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Shared\\Enyapo.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Shared\\Enyapo.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Shared\\Enyapo.Shared.csproj",
         "projectName": "Enyapo.Shared",
-        "projectPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Shared\\Enyapo.Shared.csproj",
+        "projectPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Shared\\Enyapo.Shared.csproj",
         "packagesPath": "C:\\Users\\hasae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Shared\\obj\\",
+        "outputPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hasae\\AppData\\Roaming\\NuGet\\NuGet.Config",

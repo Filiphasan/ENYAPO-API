@@ -19,6 +19,86 @@ namespace Enyapo.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Enyapo.Core.Models.Activity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(1024)
+                        .HasColumnType("nvarchar(1024)");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Location")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<DateTime>("ModifiedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Thumbnail")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserAppId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserAppId");
+
+                    b.ToTable("Activities");
+                });
+
+            modelBuilder.Entity("Enyapo.Core.Models.UserActivity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ActivityId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("ModifiedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserAppId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActivityId");
+
+                    b.HasIndex("UserAppId");
+
+                    b.ToTable("UserActivities");
+                });
+
             modelBuilder.Entity("Enyapo.Core.Models.UserApp", b =>
                 {
                     b.Property<string>("Id")
@@ -289,6 +369,36 @@ namespace Enyapo.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Enyapo.Core.Models.Activity", b =>
+                {
+                    b.HasOne("Enyapo.Core.Models.UserApp", "UserApp")
+                        .WithMany("Activities")
+                        .HasForeignKey("UserAppId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("UserApp");
+                });
+
+            modelBuilder.Entity("Enyapo.Core.Models.UserActivity", b =>
+                {
+                    b.HasOne("Enyapo.Core.Models.Activity", "Activity")
+                        .WithMany("UserActivities")
+                        .HasForeignKey("ActivityId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Enyapo.Core.Models.UserApp", "UserApp")
+                        .WithMany("UserActivities")
+                        .HasForeignKey("UserAppId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Activity");
+
+                    b.Navigation("UserApp");
+                });
+
             modelBuilder.Entity("Enyapo.Core.Models.UserPost", b =>
                 {
                     b.HasOne("Enyapo.Core.Models.UserApp", "UserApp")
@@ -351,8 +461,17 @@ namespace Enyapo.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Enyapo.Core.Models.Activity", b =>
+                {
+                    b.Navigation("UserActivities");
+                });
+
             modelBuilder.Entity("Enyapo.Core.Models.UserApp", b =>
                 {
+                    b.Navigation("Activities");
+
+                    b.Navigation("UserActivities");
+
                     b.Navigation("UserPosts");
                 });
 #pragma warning restore 612, 618

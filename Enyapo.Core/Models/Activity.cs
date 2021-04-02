@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Enyapo.Core.Models
 {
-    public class Activity : EntityBase
+    public class Activity
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -18,5 +18,8 @@ namespace Enyapo.Core.Models
         public string UserAppId { get; set; }
         public UserApp UserApp { get; set; }
         public ICollection<UserActivity> UserActivities { get; set; }
+        public DateTime CreatedTime { get; set; }
+        public DateTime ModifiedTime { get; set; }
+        public bool IsDelete { get; set; }
     }
 }

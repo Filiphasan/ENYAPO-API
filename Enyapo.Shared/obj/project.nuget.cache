@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+F1vuOdAFcJ0jHP8vc3hooPxh0VqbzjF8hS4ibBWF9QJ+Lr/PMTflp1F0Jmjn+gUb5PB2Km/xAomwqvisRcZ+Q==",
+  "dgSpecHash": "JzDvWM3F/wIzGdNmrwmE9Bi+OTqD9YYmrdDJRiSOcOqSEQZuc1yJF/zfep9lamAj863BKOajewqlqWFqUZIlWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Shared\\Enyapo.Shared.csproj",
+  "projectFilePath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Shared\\Enyapo.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hasae\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\hasae\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.1.1\\microsoft.extensions.caching.abstractions.2.1.1.nupkg.sha512",

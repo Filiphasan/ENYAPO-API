@@ -13,5 +13,8 @@ namespace Enyapo.Core.Models
         public int ActivityId { get; set; }
         public UserApp UserApp { get; set; }
         public Activity Activity { get; set; }
+        public DateTime CreatedTime { get; set; }
+        public DateTime ModifiedTime { get; set; }
+        public bool IsDelete { get; set; }
     }
 }

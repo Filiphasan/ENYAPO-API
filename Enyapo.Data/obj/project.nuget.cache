@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mGy1qgX6q5YD+9Uuw4ykW4ZqpWFo541thdrb/E7ipjfwWC4zyuFBp8KCmsrE+MCNp3KmXBPNJHLi40OaAJVn0A==",
+  "dgSpecHash": "gbfbdieoxwM+9+utLX5BDk79H/HsCX9o2x+AxBFNErtYiI+rpUhzjhaVa+W2BpZoesQIDUC+z0joMvpqF52xFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Data\\Enyapo.Data.csproj",
+  "projectFilePath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\Enyapo.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hasae\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hasae\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.4\\microsoft.aspnetcore.cryptography.internal.5.0.4.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dx9j/cdtlekQx8uufb8aIlJr18NYG+Fo/hfzRe/XeS6+MX9nSKnZuFefTuc8AiwwtHldKoWvGBY2yyPBxfD1Zg==",
+  "dgSpecHash": "V0WGXxJW0mJZ89CW0yvxRZRdQelJlE6sD1+SmyEO2rA8OYriGTb0zg1euO/9wd3VdcDsz68XUkYTSOxXT2UYuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.API\\Enyapo.API.csproj",
+  "projectFilePath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.API\\Enyapo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hasae\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\hasae\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

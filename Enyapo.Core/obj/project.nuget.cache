@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x2IsBMqAgGM1u4iADknm2rDmL1hkXsWbqNTj5q0TaBNVVD6TdjTTa7106ksIYSARM6lht/J6W6VotsjvEzeQyA==",
+  "dgSpecHash": "82m9aZfKhE3M1aHTrfGVyx/ShRTTo9TmE0q/QCJCWJkmtOEb84YVeAu9qyM3MYB3pMR55Ikk1peKwmYZ7tMAUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hasae\\Desktop\\WebApplication\\Asp.NetCore\\Projects\\Enyapo\\Enyapo.Core\\Enyapo.Core.csproj",
+  "projectFilePath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Core\\Enyapo.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hasae\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.4\\microsoft.aspnetcore.cryptography.internal.5.0.4.nupkg.sha512",
     "C:\\Users\\hasae\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.4\\microsoft.aspnetcore.cryptography.keyderivation.5.0.4.nupkg.sha512",
