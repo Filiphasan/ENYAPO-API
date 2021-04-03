@@ -148,3 +148,6 @@ C:\Users\hasae\Desktop\projekodluyoruz\ENYAPO-API\Enyapo.API\obj\Debug\net5.0\En
 C:\Users\hasae\Desktop\projekodluyoruz\ENYAPO-API\Enyapo.API\obj\Debug\net5.0\ref\Enyapo.API.dll
 C:\Users\hasae\Desktop\projekodluyoruz\ENYAPO-API\Enyapo.API\obj\Debug\net5.0\Enyapo.API.pdb
 C:\Users\hasae\Desktop\projekodluyoruz\ENYAPO-API\Enyapo.API\obj\Debug\net5.0\Enyapo.API.genruntimeconfig.cache
+C:\Users\hasae\Desktop\projekodluyoruz\ENYAPO-API\Enyapo.API\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\hasae\Desktop\projekodluyoruz\ENYAPO-API\Enyapo.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\hasae\Desktop\projekodluyoruz\ENYAPO-API\Enyapo.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll

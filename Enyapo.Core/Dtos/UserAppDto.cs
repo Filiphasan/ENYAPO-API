@@ -15,5 +15,6 @@ namespace Enyapo.Core.Dtos
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
         public string City { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }

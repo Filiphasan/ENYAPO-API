@@ -3,6 +3,7 @@ using Enyapo.Core.Models;
 using Enyapo.Core.Service;
 using Enyapo.Service.Mapper;
 using Enyapo.Shared.Dtos;
+using Enyapo.Shared.Helpers;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,8 @@ namespace Enyapo.Service.Services
                 UserName = createUserAppDto.UserName,
                 Email = createUserAppDto.Email,
                 FirstName = createUserAppDto.FirstName,
-                LastName = createUserAppDto.LastName
+                LastName = createUserAppDto.LastName,
+                PhoneNumber = createUserAppDto.PhoneNumber
             };
             var result = await _userManager.CreateAsync(user,createUserAppDto.Password);
             if (!result.Succeeded)
@@ -37,6 +39,11 @@ namespace Enyapo.Service.Services
                 return Response<UserAppDto>.Fail(new ErrorDto(errors,true),404);
             }
             var userDto = ObjectMapper.Mapper.Map<UserAppDto>(user);
+            if (!string.IsNullOrWhiteSpace(userDto.PhoneNumber))
+            {
+                SMSHelper helper = new SMSHelper();
+                helper.SendSMSForNewUser(userDto.PhoneNumber);
+            }
             return Response<UserAppDto>.Success(userDto,200);
         }
 

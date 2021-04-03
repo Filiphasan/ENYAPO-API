@@ -1591,7 +1591,10 @@
         },
         "runtime": {
           "bin/placeholder/Enyapo.Shared.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
