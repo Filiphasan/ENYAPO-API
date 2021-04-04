@@ -5988,34 +5988,44 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hasae\\.nuget\\packages\\": {}
+    "C:\\Users\\ayseg\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\Enyapo.Data.csproj",
+      "projectUniqueName": "C:\\Projects\\EnyapoAPI\\Enyapo.Data\\Enyapo.Data.csproj",
       "projectName": "Enyapo.Data",
-      "projectPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\Enyapo.Data.csproj",
-      "packagesPath": "C:\\Users\\hasae\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Data\\obj\\",
+      "projectPath": "C:\\Projects\\EnyapoAPI\\Enyapo.Data\\Enyapo.Data.csproj",
+      "packagesPath": "C:\\Users\\ayseg\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\EnyapoAPI\\Enyapo.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\hasae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ayseg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/TPQNPk2Sdbxb1M2teBE6DoYfsYgtrgAKtc89h3TObzwDB6U1ic/api": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Core\\Enyapo.Core.csproj": {
-              "projectPath": "C:\\Users\\hasae\\Desktop\\projekodluyoruz\\ENYAPO-API\\Enyapo.Core\\Enyapo.Core.csproj"
+            "C:\\Projects\\EnyapoAPI\\Enyapo.Core\\Enyapo.Core.csproj": {
+              "projectPath": "C:\\Projects\\EnyapoAPI\\Enyapo.Core\\Enyapo.Core.csproj"
             }
           }
         }

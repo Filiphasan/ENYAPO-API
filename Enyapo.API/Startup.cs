@@ -88,6 +88,11 @@ namespace Enyapo.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Enyapo.API", Version = "v1" });
             });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowOrigin", option => option.AllowAnyOrigin());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -100,6 +105,12 @@ namespace Enyapo.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Enyapo.API v1"));
             }
 
+            app.UseCors
+             (
+                 builder => builder.AllowAnyOrigin()
+                 .AllowAnyMethod()
+                 .AllowAnyHeader()
+             );
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -112,6 +123,7 @@ namespace Enyapo.API
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

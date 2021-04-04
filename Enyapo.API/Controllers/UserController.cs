@@ -1,4 +1,5 @@
-﻿using Enyapo.Core.Dtos;
+﻿using Enyapo.API.Utility;
+using Enyapo.Core.Dtos;
 using Enyapo.Core.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -23,8 +24,23 @@ namespace Enyapo.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUser(CreateUserAppDto createUserAppDto)
         {
-            var result = await _userService.CreateUserAsync(createUserAppDto);
-            return ActionResultInstance(result);
+            try
+            {
+                var result = await _userService.CreateUserAsync(createUserAppDto);
+                if (result.Error != null)
+                {
+                    return Ok(UserMessages.UserMessagesFunction(2, General.USERCREATE));
+                }
+                else
+                {
+                    return Ok(UserMessages.UserMessagesFunction(1, General.USERCREATE));
+                }
+
+            }
+            catch (Exception)
+            {
+                return BadRequest(UserMessages.UserMessagesFunction(2, General.USERCREATE));
+            }
         }
         [Authorize]
         [HttpGet]
