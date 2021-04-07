@@ -25,6 +25,12 @@ namespace Enyapo.API.Controllers
             var result = await _userPostService.AddAsync(createUserPostDto);
             return ActionResultInstance(result);
         }
+        [HttpPost("{id}")]
+        public async Task<IActionResult> IncrementLike(int id)
+        {
+            var result = await _userPostService.IncrementLike(id);
+            return ActionResultInstance(result);
+        }
         [HttpPut]
         public async Task<IActionResult> UpdatePost(UpdateUserPostDto updateUserPostDto)
         {

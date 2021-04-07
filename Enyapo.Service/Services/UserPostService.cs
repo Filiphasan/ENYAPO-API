@@ -69,6 +69,19 @@ namespace Enyapo.Service.Services
             return Response<NoDataDto>.Success(200);
         }
 
+        public async Task<Response<NoDataDto>> IncrementLike(int id)
+        {
+            var entity = await _userPostRepository.GetByIdAsync(id);
+            if (entity == null)
+            {
+                return Response<NoDataDto>.Fail("Gönderi bulunamadı!", 404, true);
+            }
+            entity.LikesCount += 1;
+            _userPostRepository.Update(entity);
+            await _unitOfWork.CommitAsync();
+            return Response<NoDataDto>.Success(200);
+        }
+
         public async Task<Response<NoDataDto>> Remove(int id)
         {
             var entity = await _userPostRepository.GetByIdAsync(id);

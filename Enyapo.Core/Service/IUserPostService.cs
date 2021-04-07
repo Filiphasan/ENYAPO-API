@@ -17,6 +17,7 @@ namespace Enyapo.Core.Service
         Task<Response<IEnumerable<UserPostDto>>> Where(Expression<Func<UserPost, bool>> predicate);
         Task<Response<UserPostDto>> AddAsync(CreateUserPostDto entity);
         Task<Response<NoDataDto>> Remove(int id);
+        Task<Response<NoDataDto>> IncrementLike(int id);
         Task<Response<NoDataDto>> HardRemove(int id);
         Task<Response<UserPostDto>> Update(UpdateUserPostDto entity);
         Task<Response<IEnumerable<UserPostDto>>> WhereMany(params Expression<Func<UserPost, bool>>[] predicates);
