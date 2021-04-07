@@ -18,12 +18,6 @@
       "Microsoft.Extensions.Caching.Abstractions/2.1.1": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "2.1.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
-          }
         }
       },
       "Microsoft.Extensions.Caching.Memory/2.1.1": {
@@ -31,44 +25,19 @@
           "Microsoft.Extensions.Caching.Abstractions": "2.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
           "Microsoft.Extensions.Options": "2.1.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
-          }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
-          }
-        }
-      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {},
       "Microsoft.Extensions.Options/2.1.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
           "Microsoft.Extensions.Primitives": "2.1.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
-          }
         }
       },
       "Microsoft.Extensions.Primitives/2.1.1": {
         "dependencies": {
           "System.Memory": "4.5.1",
           "System.Runtime.CompilerServices.Unsafe": "4.5.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
-          }
         }
       },
       "Microsoft.IdentityModel.Logging/6.9.0": {

@@ -20,7 +20,7 @@ namespace Enyapo.Data.Context
         public DbSet<UserPost> UserPosts { get; set; }
         public DbSet<Activity> Activities { get; set; }
         public DbSet<UserActivity> UserActivities { get; set; }
-
+        public DbSet<PostComment> PostComments { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new UserAppConfiguration());
@@ -28,6 +28,7 @@ namespace Enyapo.Data.Context
             builder.ApplyConfiguration(new UserRefreshTokenConfiguration());
             builder.ApplyConfiguration(new ActivityConfiguration());
             builder.ApplyConfiguration(new UserActivityConfiguration());
+            builder.ApplyConfiguration(new PostCommentConfiguration());
             base.OnModelCreating(builder);
         }
     }

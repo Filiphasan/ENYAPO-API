@@ -3,6 +3,7 @@ using Enyapo.Core.Models;
 using Enyapo.Core.Repository;
 using Enyapo.Core.Service;
 using Enyapo.Core.UnitOfWork;
+using Enyapo.Service.Mapper;
 using Enyapo.Shared.Dtos;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -52,6 +53,8 @@ namespace Enyapo.Service.Services
                 userRefreshToken.Code = token.RefreshToken;
                 userRefreshToken.Expiration = token.RefreshTokenExpiration;
             }
+            var userDto = ObjectMapper.Mapper.Map<UserAppDto>(user);
+            token.UserAppDto = userDto;
             await _unitOfWork.CommitAsync();
             return Response<TokenDto>.Success(token, 200);
         }

@@ -21,5 +21,6 @@ namespace Enyapo.Core.Models
         public DateTime CreatedTime { get; set; }
         public DateTime ModifiedTime { get; set; }
         public bool IsDelete { get; set; }
+        public bool IsActive { get; set; }
     }
 }

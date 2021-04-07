@@ -15,6 +15,44 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
+      "FluentValidation/9.5.3": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidation.AspNetCore/9.5.3": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "9.5.3",
+          "FluentValidation.DependencyInjectionExtensions": "9.5.3"
+        },
+        "compile": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "FluentValidation.DependencyInjectionExtensions/9.5.3": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "9.5.3",
+          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -1596,7 +1634,10 @@
         },
         "runtime": {
           "bin/placeholder/Enyapo.Shared.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -1615,6 +1656,56 @@
         "lib/net461/AutoMapper.xml",
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "FluentValidation/9.5.3": {
+      "sha512": "BataCga/cwQUeo9yy8dzDnihx3N5l1+wj6kEQOkdQ5FIsSFcWD/UjdPJ2jNKODSPAtYuDH5KLM5IBrr1UCNf/A==",
+      "type": "package",
+      "path": "fluentvalidation/9.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.9.5.3.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.AspNetCore/9.5.3": {
+      "sha512": "ihj6mFOBtzc4csXAUOJ7KwuKVB0fzIqvZloTy27lwDEcXNYCf34JroSa+N1O3XTvjbB6pWHsajZS5EXyGz6TSA==",
+      "type": "package",
+      "path": "fluentvalidation.aspnetcore/9.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.aspnetcore.9.5.3.nupkg.sha512",
+        "fluentvalidation.aspnetcore.nuspec",
+        "lib/net5.0/FluentValidation.AspNetCore.dll",
+        "lib/net5.0/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
+      ]
+    },
+    "FluentValidation.DependencyInjectionExtensions/9.5.3": {
+      "sha512": "IdGc5poMmWMFOVTgpVFN35EuHqx1S5AyALLJyyqsdDbZcuWcCZG9j41MrS/K1vIENkSypg1y15VCkWw12Vxa1Q==",
+      "type": "package",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.dependencyinjectionextensions.9.5.3.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.nuspec",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -2731,7 +2822,6 @@
       "path": "system.collections.specialized/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2919,7 +3009,6 @@
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2958,7 +3047,6 @@
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3130,7 +3218,6 @@
       "path": "system.diagnostics.tools/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3187,7 +3274,6 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3523,7 +3609,6 @@
       "path": "system.io.filesystem/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3561,7 +3646,6 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3714,7 +3798,6 @@
       "path": "system.net.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3793,7 +3876,6 @@
       "path": "system.private.datacontractserialization/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.3/System.Private.DataContractSerialization.dll",
@@ -4048,7 +4130,6 @@
       "path": "system.reflection.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4105,7 +4186,6 @@
       "path": "system.reflection.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4482,7 +4562,6 @@
       "path": "system.runtime.handles/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4520,7 +4599,6 @@
       "path": "system.runtime.interopservices/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4613,7 +4691,6 @@
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5079,7 +5156,6 @@
       "path": "system.text.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5187,7 +5263,6 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5255,7 +5330,6 @@
       "path": "system.text.regularexpressions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5478,7 +5552,6 @@
       "path": "system.threading.tasks.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
@@ -5516,7 +5589,6 @@
       "path": "system.xml.readerwriter/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5588,7 +5660,6 @@
       "path": "system.xml.xdocument/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5697,7 +5768,6 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5786,6 +5856,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Enyapo.Service >= 1.0.0",
+      "FluentValidation.AspNetCore >= 9.5.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.4",
       "Swashbuckle.AspNetCore >= 5.6.3"
@@ -5844,6 +5915,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "FluentValidation.AspNetCore": {
+            "target": "Package",
+            "version": "[9.5.3, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.4, )"

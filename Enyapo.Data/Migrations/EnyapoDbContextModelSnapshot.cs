@@ -34,6 +34,9 @@ namespace Enyapo.Data.Migrations
                         .HasMaxLength(1024)
                         .HasColumnType("nvarchar(1024)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
@@ -65,6 +68,28 @@ namespace Enyapo.Data.Migrations
                     b.HasIndex("UserAppId");
 
                     b.ToTable("Activities");
+                });
+
+            modelBuilder.Entity("Enyapo.Core.Models.PostComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasMaxLength(1024)
+                        .HasColumnType("nvarchar(1024)");
+
+                    b.Property<int>("UserPostId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserPostId");
+
+                    b.ToTable("PostComments");
                 });
 
             modelBuilder.Entity("Enyapo.Core.Models.UserActivity", b =>
@@ -378,6 +403,17 @@ namespace Enyapo.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("UserApp");
+                });
+
+            modelBuilder.Entity("Enyapo.Core.Models.PostComment", b =>
+                {
+                    b.HasOne("Enyapo.Core.Models.UserPost", "UserPost")
+                        .WithMany()
+                        .HasForeignKey("UserPostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserPost");
                 });
 
             modelBuilder.Entity("Enyapo.Core.Models.UserActivity", b =>

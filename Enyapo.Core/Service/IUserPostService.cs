@@ -19,5 +19,6 @@ namespace Enyapo.Core.Service
         Task<Response<NoDataDto>> Remove(int id);
         Task<Response<NoDataDto>> HardRemove(int id);
         Task<Response<UserPostDto>> Update(UpdateUserPostDto entity);
+        Task<Response<IEnumerable<UserPostDto>>> WhereMany(params Expression<Func<UserPost, bool>>[] predicates);
     }
 }

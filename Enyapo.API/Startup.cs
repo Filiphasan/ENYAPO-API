@@ -8,7 +8,9 @@ using Enyapo.Data.UnitOfWork;
 using Enyapo.Service.Extensions;
 using Enyapo.Service.Services;
 using Enyapo.Shared.Configurations;
+using Enyapo.Shared.Extensions;
 using Enyapo.Shared.Service;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -83,7 +85,15 @@ namespace Enyapo.API
                 };
             });
             services.Configure<CustomTokenOptions>(Configuration.GetSection("TokenOption"));
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation(opt =>
+            {
+                opt.RegisterValidatorsFromAssemblyContaining<Startup>();
+            });
+            services.UseCustomValidationResponse();
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("AllowOrigin", builder => builder.WithOrigins("http://localhost:3000"));
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Enyapo.API", Version = "v1" });
@@ -104,6 +114,7 @@ namespace Enyapo.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Enyapo.API v1"));
             }
+            app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader());
 
             app.UseCors
              (

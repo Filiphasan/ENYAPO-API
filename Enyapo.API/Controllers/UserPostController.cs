@@ -49,5 +49,16 @@ namespace Enyapo.API.Controllers
             var result = await _userPostService.Remove(id);
             return ActionResultInstance(result);
         }
+
+
+        [HttpGet("like")]
+        public async Task<IActionResult> GetUserPostWithLikesCount()
+        {
+            //var result = await _userPostService.Where(x => x.LikesCount > 5);
+            //return ActionResultInstance(result);
+
+            var result = await _userPostService.WhereMany(x => x.LikesCount > 5, x => x.Id > 9, x => x.Content.Length > 2);
+            return ActionResultInstance(result);
+        }
     }
 }

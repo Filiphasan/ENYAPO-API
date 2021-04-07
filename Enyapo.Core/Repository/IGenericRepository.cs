@@ -17,5 +17,6 @@ namespace Enyapo.Core.Repository
         Task AddAsync(TEntity entity);
         void Remove(TEntity entity);
         TEntity Update(TEntity entity);
+        IQueryable<TEntity> WhereMany(params Expression<Func<TEntity, bool>>[] predicates);
     }
 }

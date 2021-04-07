@@ -69,5 +69,15 @@ namespace Enyapo.Data.Repository
         {
              return _dbSet.Where(predicate);
         }
+
+        public IQueryable<TEntity> WhereMany(params Expression<Func<TEntity, bool>>[] predicates)
+        {
+            IQueryable<TEntity> query = _dbSet;
+            foreach (var item in predicates)
+            {
+                query = query.Where(item);
+            }
+            return query;
+        }
     }
 }

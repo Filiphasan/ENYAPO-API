@@ -3,7 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App"></FrameworkReference>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.9.0" />
   </ItemGroup>

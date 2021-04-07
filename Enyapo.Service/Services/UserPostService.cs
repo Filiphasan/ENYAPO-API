@@ -106,5 +106,16 @@ namespace Enyapo.Service.Services
             var listDto = ObjectMapper.Mapper.Map<List<UserPostDto>>(list);
             return Response<IEnumerable<UserPostDto>>.Success(listDto, 200);
         }
+
+        public async Task<Response<IEnumerable<UserPostDto>>> WhereMany(params Expression<Func<UserPost, bool>>[] predicates)
+        {
+            var list = await _userPostRepository.WhereMany(predicates).ToListAsync();
+            if (!list.Any())
+            {
+                return Response<IEnumerable<UserPostDto>>.Fail("No data!", 502, true);
+            }
+            var listDto = ObjectMapper.Mapper.Map<List<UserPostDto>>(list);
+            return Response<IEnumerable<UserPostDto>>.Success(listDto, 200);
+        }
     }
 }
