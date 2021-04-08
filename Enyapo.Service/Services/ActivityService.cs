@@ -91,7 +91,7 @@ namespace Enyapo.Service.Services
 
         public async Task<Response<IEnumerable<ActivityDto>>> Where(Expression<Func<Activity, bool>> predicate)
         {
-            var list = await _activityRepository.Where(predicate).Include(x => x.UserActivities).ToListAsync();
+            var list = await _activityRepository.Where(predicate).Include(x => x.UserActivities).OrderByDescending(x => x.Id).ToListAsync();
             if (!list.Any())
             {
                 return Response<IEnumerable<ActivityDto>>.Fail("No data!", 502, true);

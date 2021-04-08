@@ -111,7 +111,7 @@ namespace Enyapo.Service.Services
 
         public async Task<Response<IEnumerable<UserPostDto>>> Where(Expression<Func<UserPost, bool>> predicate)
         {
-            var list = await _userPostRepository.Where(predicate).ToListAsync();
+            var list = await _userPostRepository.Where(predicate).OrderByDescending(x => x.Id).ToListAsync();
             if (!list.Any())
             {
                 return Response<IEnumerable<UserPostDto>>.Fail("No data!", 502, true);
@@ -122,7 +122,7 @@ namespace Enyapo.Service.Services
 
         public async Task<Response<IEnumerable<UserPostDto>>> WhereMany(params Expression<Func<UserPost, bool>>[] predicates)
         {
-            var list = await _userPostRepository.WhereMany(predicates).ToListAsync();
+            var list = await _userPostRepository.WhereMany(predicates).OrderByDescending(x => x.Id).ToListAsync();
             if (!list.Any())
             {
                 return Response<IEnumerable<UserPostDto>>.Fail("No data!", 502, true);
