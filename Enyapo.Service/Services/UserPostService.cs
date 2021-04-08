@@ -5,6 +5,7 @@ using Enyapo.Core.Service;
 using Enyapo.Core.UnitOfWork;
 using Enyapo.Service.Mapper;
 using Enyapo.Shared.Dtos;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,14 @@ namespace Enyapo.Service.Services
 {
     public class UserPostService : IUserPostService
     {
+        private readonly UserManager<UserApp> _userManager;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IGenericRepository<UserPost> _userPostRepository;
-        public UserPostService(IUnitOfWork unitOfWork, IGenericRepository<UserPost> userPostRepository)
+        public UserPostService(IUnitOfWork unitOfWork, IGenericRepository<UserPost> userPostRepository, UserManager<UserApp> userManager)
         {
             _unitOfWork = unitOfWork;
             _userPostRepository = userPostRepository;
+            _userManager = userManager;
         }
 
         public async Task<Response<UserPostDto>> AddAsync(CreateUserPostDto entity)
@@ -43,6 +46,15 @@ namespace Enyapo.Service.Services
                 return Response<IEnumerable<UserPostDto>>.Fail("No data!", 502, true);
             }
             var entitiesDto = ObjectMapper.Mapper.Map<List<UserPostDto>>(entities);
+            foreach (var item in entitiesDto)
+            {
+                var user = await _userManager.FindByIdAsync(item.UserAppId);
+                if (user != null)
+                {
+                    var userDto = ObjectMapper.Mapper.Map<UserAppDto>(user);
+                    item.UserAppDto = userDto;
+                }
+            }
             return Response<IEnumerable<UserPostDto>>.Success(entitiesDto,200);
         }
 
@@ -54,6 +66,9 @@ namespace Enyapo.Service.Services
                 return Response<UserPostDto>.Fail("User Post not found!", 404, true);
             }
             var entityDto = ObjectMapper.Mapper.Map<UserPostDto>(entity);
+            var user = await _userManager.FindByIdAsync(entityDto.UserAppId);
+            var userDto = ObjectMapper.Mapper.Map<UserAppDto>(user);
+            entityDto.UserAppDto = userDto;
             return Response<UserPostDto>.Success(entityDto,200);
         }
 
@@ -117,6 +132,15 @@ namespace Enyapo.Service.Services
                 return Response<IEnumerable<UserPostDto>>.Fail("No data!", 502, true);
             }
             var listDto = ObjectMapper.Mapper.Map<List<UserPostDto>>(list);
+            foreach (var item in listDto)
+            {
+                var user = await _userManager.FindByIdAsync(item.UserAppId);
+                if (user != null)
+                {
+                    var userDto = ObjectMapper.Mapper.Map<UserAppDto>(user);
+                    item.UserAppDto = userDto;
+                }
+            }
             return Response<IEnumerable<UserPostDto>>.Success(listDto, 200);
         }
 
@@ -128,6 +152,15 @@ namespace Enyapo.Service.Services
                 return Response<IEnumerable<UserPostDto>>.Fail("No data!", 502, true);
             }
             var listDto = ObjectMapper.Mapper.Map<List<UserPostDto>>(list);
+            foreach (var item in listDto)
+            {
+                var user = await _userManager.FindByIdAsync(item.UserAppId);
+                if (user != null)
+                {
+                    var userDto = ObjectMapper.Mapper.Map<UserAppDto>(user);
+                    item.UserAppDto = userDto;
+                }
+            }
             return Response<IEnumerable<UserPostDto>>.Success(listDto, 200);
         }
     }

@@ -18,6 +18,7 @@ namespace Enyapo.Core.Dtos
         public string UserAppId { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime ModifiedTime { get; set; }
-        public ICollection<UserActivity> UserActivities { get; set; }
+        public UserAppDto UserAppDto { get; set; }
+        public List<UserAppDto> UserAppDtos { get; set; } = new List<UserAppDto>();
     }
 }
